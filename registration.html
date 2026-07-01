@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .body {
+            background: #72809A;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            width: 500px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 40px;
+            color: #444;
+        }
+
+        .text {
+            text-align: center;
+            color: gray;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .table {
+            width: 100%;
+        }
+
+        .td {
+            padding: 10px;
+        }
+
+        .input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .checkbox {
+            margin-right: 8px;
+        }
+
+        .checkbox-text {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .link {
+            color: green;
+            text-decoration: none;
+        }
+
+        .button {
+            width: 100%;
+            padding: 12px;
+            background: green;
+            color: white;
+            border: none;
+            font-size: 18px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .footer-link {
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body class="body">
+
+    <div class="container">
+
+        <h1 class="heading">Register</h1>
+
+        <p class="text">
+            Create your account. It's free and only takes a minute.
+        </p>
+
+        <table class="table">
+
+            <tr>
+
+                <td class="td">
+                    <input class="input" type="text" placeholder="First Name">
+                </td>
+
+                <td class="td">
+                    <input class="input" type="text" placeholder="Last Name">
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td class="td" colspan="2">
+                    <input class="input" type="email" placeholder="Email">
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td class="td" colspan="2">
+                    <input class="input" type="password" placeholder="Password">
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td class="td" colspan="2">
+                    <input class="input" type="password" placeholder="Confirm Password">
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td class="td" colspan="2">
+
+                    <input class="checkbox" type="checkbox">
+
+                    <span class="checkbox-text">
+                        I accept the Terms of Use & Privacy Policy.
+                    </span>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td class="td" colspan="2">
+                    <button class="button">Register Now</button>
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+    <div class="footer">
+
+        Already have an account?
+
+        <a class="footer-link" href="#">Sign in</a>
+
+    </div>
+
+</body>
+
+</html>

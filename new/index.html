@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/new/bootstrap.min.css">
+        <link rel="stylesheet" href="/new/index.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container">
+                <a href="" class="navbar-brand">TechStore</a>
+
+                <button class="btn btn-outline-light">
+                    login
+                </button>
+            </div>
+        </nav>
+
+        <div class="container my-5">
+            <h2>Book grid list</h2>
+            <style>
+                .library-grid{
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 25px;
+                }
+                .book{
+                    height: 120px;
+                    background-color: blue;
+                    color: white;
+                    font-size: 1.4rem;
+                    font-weight: bold;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: 0.3s;
+                }
+
+                .book:hover{
+
+                }
+            </style>
+            <div class="library-grid">
+                <div class="book">javaScript</div>
+                <div class="book">typeScript</div>
+                <div class="book">ReactJS</div>
+                <div class="book">MongoDB</div>
+                <div class="book">ExpressJS</div>
+            </div>
+        </div>
+
+        <div class="name" id="shobhit"></div>
+    </body>
+</html>
