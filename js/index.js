@@ -31,7 +31,7 @@ function season(){
     } else if(months == 6 || months == 7 || months == 8){
         alert("The season for month " + months + " is: " + "Summer (hot season)");
     } else if(months == 9 || months == 10 || months == 11){
-        alert("The season for month " + months + " is: " + "Autumn (cool season)");
+        alert("The season for month " + months + " is: " + "Autumn (Harvest/Rainy Season)");
     } else {
         alert("Invalid month number : " + months );
     }
