@@ -25,7 +25,6 @@ function season(){
 
     if(months == 12 || months == 1 || months == 2){
         alert("The season for month " + months + " is: " + "Winter (cold season)");
-        season = "Winter (cold season)";
     } else if(months == 3 || months == 4 || months == 5){
         alert("The season for month " + months + " is: " +  "Spring (pleasant season)");
     } else if(months == 6 || months == 7 || months == 8){
