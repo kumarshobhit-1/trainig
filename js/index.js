@@ -22,19 +22,18 @@ function monthdays(){
 
 function season(){
     var months = prompt("enter the month number")
-    var season;
 
     if(months == 12 || months == 1 || months == 2){
+        alert("The season for month " + months + " is: " + "Winter (cold season)");
         season = "Winter (cold season)";
     } else if(months == 3 || months == 4 || months == 5){
-        season = "Spring (pleasant season)";
+        alert("The season for month " + months + " is: " +  "Spring (pleasant season)");
     } else if(months == 6 || months == 7 || months == 8){
-        season = "Summer (hot season)";
+        alert("The season for month " + months + " is: " + "Summer (hot season)");
     } else if(months == 9 || months == 10 || months == 11){
-        season = "Autumn (cool season)";
+        alert("The season for month " + months + " is: " + "Autumn (cool season)");
     } else {
-        season = "Invalid month number";
+        alert("Invalid month number : " + months );
     }
 
-    alert("The season for month " + months + " is: " + season);
 }
