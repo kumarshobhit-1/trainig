@@ -1,19 +1,4 @@
 {
-  "contact": [
-    {
-      "full_name": "Shobhit Kumar",
-      "email": "shobhitkumar1437@gmail.com",
-      "subject": "cbhc",
-      "message": "bhjdss",
-      "id": "l3K9xaEfUiU"
-    },
-    {
-      "full_name": "Shobhit Kumar",
-      "email": "shobhitk1437@gmail.com",
-      "subject": "cxhjbdfsh",
-      "message": " dscbds",
-      "id": "owoPUxqGfbU"
-    }
-  ],
+  "contact": [],
   "$schema": "./node_modules/json-server/schema.json"
 }

@@ -36,11 +36,6 @@ export const Header = () => {
               </a>
             </li>
 
-            <li className="nav-item">
-              <a className="nav-link" href="/categories">
-                Categories
-              </a>
-            </li>
 
             <li className="nav-item">
               <a className="nav-link" href="/about">
@@ -51,6 +46,11 @@ export const Header = () => {
             <li className="nav-item">
               <a className="nav-link" href="/contact">
                 Contact
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/contactlist">
+                ContactList
               </a>
             </li>
 

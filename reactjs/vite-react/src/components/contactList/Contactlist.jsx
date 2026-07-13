@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import toast, { Toaster } from 'react-hot-toast';
 
 
 export const Contactlist = () => {
@@ -15,12 +15,29 @@ export const Contactlist = () => {
         axios.get("http://localhost:3001/contact")
             .then((res) => {
                 // console.log(res);
-                console.log(res.data);
+                // console.log(res.data);
                 setRecord(res.data)
             })
     }, [])
 
+    const deleteButton = (id) => {
+        const ok = confirm("Are you sure you want to delete this record?")
+        if (!ok) {
+            return
+        }
+        axios.delete(`http://localhost:3001/contact/${id}`)
+            .then((res) => {
+                // console.log(res);
+                // alert("Record Deleted")
+                toast.success("Record deleted Successfully");
+                window.location.reload()
+            }
+        )
+    }
 
+    const editButton = (id) => {
+        window.location.href = `/contact/${id}`
+    }
     // const colorChnage = () => {
     //     setColor("Blue")
     // }
@@ -31,6 +48,7 @@ export const Contactlist = () => {
     return (
 
         <div className="container">
+            <Toaster position="top-right" />
             <div className="row">
                 <div className="col-md-12">
                     <br />
@@ -44,7 +62,7 @@ export const Contactlist = () => {
             <div className="row">
                 <div className="col-md-1"></div>
                 <div className="col-md-10">
-                    <table class="table table-striped">
+                    <table className="table table-striped">
                         <thead>
                             <tr>
                                 <th>Id</th>
@@ -58,16 +76,16 @@ export const Contactlist = () => {
                         </thead>
                         <tbody>
                             {
-                                record.map((item, index) =>
-                                    <tr>
+                                record.map((item) =>
+                                    <tr key={item.id}>
                                         <td>{item.id}</td>
                                         <td>{item.full_name}</td>
                                         <td>{item.email}</td>
                                         <td>{item.subject}</td>
                                         <td>{item.message}</td>
                                         <td>
-                                            <input type="submit" value="Edit" className='btn btn-primary' />&nbsp;
-                                            <input type="submit" value="Delete" className='btn btn-danger' />
+                                            <button onClick={() => editButton(item.id)} className='btn btn-primary'>Edit</button>&nbsp;
+                                            <button onClick={() => deleteButton(item.id)} className='btn btn-danger'>Delete</button>
                                         </td>
                                     </tr>
 

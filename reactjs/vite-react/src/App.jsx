@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom'
 import { Home } from './components/home/Home'
 import { Contact } from './components/contact/Contact'
 import { Contactlist } from './components/contactList/Contactlist'
+import { EditContact } from './components/editContact/EditContact'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="contact" element={<Contact />} />
           <Route path="contactlist" element={<Contactlist />} />
+          <Route path="contact/:id" element={<EditContact />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />

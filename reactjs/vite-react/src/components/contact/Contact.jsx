@@ -22,14 +22,30 @@ export const Contact = () => {
     setData({ ...data, [name] : value})
   }
 
-
   const saveFromData = (e) => {
-    e.preventDefault()
-    console.log(data);
-    axios.post("http://localhost:3001/contact",data)
-  }
+  e.preventDefault();
+
+  axios.post("http://localhost:3001/contact", data)
+    .then((res) => {
+       // console.log(res);
+       // console.log(res.data);
+      toast.success("Record Added Successfully");
+
+      setData({
+        full_name: "",
+        email: "",
+        subject: "",
+        message: ""
+      });
+    })
+    .catch((err) => {
+      toast.error("Something went wrong");
+    });
+};
   return (
+    
     <div className="container py-5">
+      <Toaster position="top-right" />
       {/* Heading */}
       <div className="text-center mb-5">
         <h1 className="fw-bold">Contact Us</h1>
@@ -59,6 +75,7 @@ export const Contact = () => {
                       className="form-control"
                       placeholder="Enter your name"
                       name="full_name"
+                      value={data.full_name}
                       onChange={handler}
                     />
                   </div>
@@ -70,6 +87,7 @@ export const Contact = () => {
                       className="form-control"
                       placeholder="Enter your email"
                       name="email"
+                      value={data.email}
                       onChange={handler}
                     />
                   </div>
@@ -83,6 +101,7 @@ export const Contact = () => {
                     className="form-control"
                     placeholder="Enter subject"
                     name="subject"
+                    value={data.subject}
                     onChange={handler}
                   />
                 </div>
@@ -94,6 +113,7 @@ export const Contact = () => {
                     className="form-control"
                     placeholder="Write your message..."
                     name="message"
+                    value={data.message}
                     onChange={handler}
                   ></textarea>
                 </div>
