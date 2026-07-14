@@ -48,7 +48,7 @@ const updateData = (e) => {
         });
 };
 
-// console.log(id); // check karo id aa rahi hai ya nahi 
+// console.log(id); 
  return (
     
     <div className="container py-5">
