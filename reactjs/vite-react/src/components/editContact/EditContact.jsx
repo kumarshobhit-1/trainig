@@ -48,7 +48,7 @@ const updateData = (e) => {
         });
 };
 
-// console.log(id); 
+// console.log(id);
  return (
     
     <div className="container py-5">
